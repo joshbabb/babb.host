@@ -1,0 +1,137 @@
+body {
+  display: flex;
+  height: 99.8vh; /* 100vh overflows */
+  flex-direction: column;
+
+  background: #eee;
+
+  /* Adam Morse, github.com/mrmrs */
+  font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'avenir next', avenir, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               'Liberation Sans', /* Linux */
+               sans-serif; /* Everything else */
+  /* /mrmrs */
+}
+
+/* more mrmrs */
+a {
+  transition: color .4s;
+  color: #265C83;
+}
+a:link,
+a:visited { color: #265C83; }
+a:hover   { color: #7FDBFF; }
+a:active  {
+  transition: color .3s;
+  color: #007BE6;
+}
+.link { text-decoration: none; }
+/* /mrmrs */
+
+content {
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 20px 0 20px;
+}
+
+header {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 40px;
+  padding: 0 10px;
+
+  background: #e9e9e9;
+  border-bottom: 1px solid #ddd;
+}
+
+header b:first-of-type {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+
+  font-weight: 400;
+
+  padding-right: 0.27em;
+
+  position: relative;
+  bottom: 1px;
+}
+
+header b:last-of-type {
+  flex: 1;
+
+  font-weight: 700;
+}
+
+header a {
+  float: right;
+}
+
+header img {
+  max-height: 1em;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  flex: 0 0 12em;
+  order: -1;
+
+  align-self: flex-start;
+}
+
+aside {
+  flex: 0 0 12em;
+
+  text-align: right;
+  align-self: flex-end;
+}
+
+footer {
+  display: flex;
+
+  align-self: flex-end;
+  align-items: center;
+
+  min-height: 20px;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  content {
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: start;
+
+    padding: 3px;
+  }
+  nav {
+    order: 1;
+  }
+  aside {
+    order: 2;
+  }
+}
+
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
+  position: relative;
+  top: 1px;
+}
