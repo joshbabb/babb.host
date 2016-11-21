@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+
+}
+
+nav {
+  
+}
+
+content {
+
+}
+
+footer {
+
+}
+
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
+  position: relative;
+  bottom: 2px;
+}
