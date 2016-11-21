@@ -70,10 +70,20 @@ header b:first-of-type {
   bottom: 1px;
 }
 
-header b:last-of-type {
-  flex: 1;
-
+header b:nth-of-type(2) {
   font-weight: 700;
+}
+
+header b:last-of-type {
+  color: #fff;
+  text-shadow: 1px 1px #aaa;
+
+  font-weight: 400;
+
+  position: relative;
+  bottom: 1px;
+
+  flex: 1;
 }
 
 header a {
