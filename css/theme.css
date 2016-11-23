@@ -1,6 +1,6 @@
 body {
   display: flex;
-  height: 99.8vh; /* 100vh overflows */
+  height: 100vh;
   flex-direction: column;
 
   background: #eee;
@@ -28,7 +28,7 @@ a {
 }
 a:link,
 a:visited { color: #265C83; }
-a:hover   { color: #7FDBFF; }
+a:hover   { color: #000; }
 a:active  {
   transition: color .3s;
   color: #007BE6;
@@ -36,14 +36,12 @@ a:active  {
 .link { text-decoration: none; }
 /* /mrmrs */
 
-content {
-  display: flex;
-  flex: 1;
+p {
+  margin-bottom: 1em;
+}
 
-  align-items: center;
-  justify-content: center;
-
-  padding: 3px 20px 0 20px;
+i {
+  font-style: italic;
 }
 
 header {
@@ -60,7 +58,8 @@ header {
 
 header b:first-of-type {
   color: #fff;
-  text-shadow: 1px 1px #000;
+  text-shadow: 1px 1px #000,
+               0 1px 3px #aaa;
 
   font-weight: 400;
 
@@ -76,7 +75,8 @@ header b:nth-of-type(2) {
 
 header b:last-of-type {
   color: #fff;
-  text-shadow: 1px 1px #aaa;
+  text-shadow: 1px 1px #cacaca,
+               0 1px 3px #ccc;
 
   font-weight: 400;
 
@@ -94,15 +94,54 @@ header img {
   max-height: 1em;
 }
 
+content {
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 20px 0 20px;
+}
+
 main {
   flex: 1;
+}
+
+#booking {
+  margin-top: auto;
+}
+
+main > ul {
+  display: inline-block;
+
+  margin: 0 1em 1em 0;
 }
 
 nav {
   flex: 0 0 12em;
   order: -1;
 
-  align-self: flex-start;
+  align-self: center;
+}
+
+nav li {
+  margin-top: 0.5em;
+}
+
+li > ul {
+  padding-left: 0.33em;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+nav a:after {
+  content: ' \00bb';
+  opacity: 0.27;
 }
 
 aside {
@@ -114,6 +153,7 @@ aside {
 
 footer {
   display: flex;
+  order: 3;
 
   align-self: flex-end;
   align-items: center;
@@ -131,17 +171,38 @@ footer {
 
     padding: 3px;
   }
+  #booking {
+    align-items: stretch;
+    justify-content:  flex-start;
+  }
   nav {
+    flex: 1;
     order: 1;
+
+    align-self: flex-start;
+
+    margin-left: 1em;
   }
   aside {
+    flex: 1;
     order: 2;
   }
 }
 
 .copyleft {
+  font-weight: 700;
+
   display: inline-block;
   transform: rotate(180deg);
+
+  overflow: hidden;
+
   position: relative;
   top: 1px;
+}
+
+@-moz-document url-prefix() {
+  .copyleft {
+    top: 3px;
+  }
 }
