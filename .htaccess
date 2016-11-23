@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^about?$ ./about.html
+RewriteRule ^work?$ ./work.html
+RewriteRule ^code?$ ./code.html
+RewriteRule ^booking?$ ./booking.html
+RewriteRule ^contact?$ ./contact.html
