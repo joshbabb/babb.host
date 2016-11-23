@@ -40,6 +40,10 @@ p {
   margin-bottom: 1em;
 }
 
+i {
+  font-style: italic;
+}
+
 header {
   display: flex;
 
