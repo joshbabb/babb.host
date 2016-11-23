@@ -108,6 +108,16 @@ main {
   flex: 1;
 }
 
+#booking {
+  margin-top: auto;
+}
+
+main > ul {
+  display: inline-block;
+
+  margin: 0 1em 1em 0;
+}
+
 nav {
   flex: 0 0 12em;
   order: -1;
@@ -160,6 +170,10 @@ footer {
     justify-content: start;
 
     padding: 3px;
+  }
+  #booking {
+    align-items: stretch;
+    justify-content:  flex-start;
   }
   nav {
     flex: 1;
