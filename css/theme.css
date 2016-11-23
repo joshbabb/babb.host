@@ -36,6 +36,10 @@ a:active  {
 .link { text-decoration: none; }
 /* /mrmrs */
 
+p {
+  margin-bottom: 1em;
+}
+
 header {
   display: flex;
 
