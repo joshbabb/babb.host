@@ -150,7 +150,7 @@ nav li {
 nav li:after {
   content: '';
 
-  margin: -1em 1em -1em 2em;
+  margin: -1em 1em -1em 1em;
 
   border-right: 1px solid #fff;
   -moz-transform: skew(-22.5deg);
@@ -229,6 +229,9 @@ footer {
   }
   nav li:first-of-type {
     margin-bottom: 2em;
+  }
+  nav li:after {
+    margin: -1em 1em -1em 2em;
   }
   content {
     flex-direction: column;
