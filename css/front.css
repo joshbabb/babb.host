@@ -1,12 +1,5 @@
 header {
-  display: flex;
-  align-items: center;
-
   min-height: 61.8vh;
-  padding: 0 10px;
-
-  background: #ccc;
-  border-bottom: 1px solid #ddd;
 }
 
 .container {
