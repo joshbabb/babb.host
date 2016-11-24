@@ -138,34 +138,31 @@ header img {
 }
 
 nav {
-  /*border: 1px solid #fff;*/
+  display: flex;
+  flex: 1;
+
+  border: 1px solid #fff;
   padding: 1em 1em 1em 2em;
 
   align-self: center;
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav li {
   display: inline-flex;
-
-  border-top: 1px solid #fff;
-  padding: 1em 0 1em 0;
-  margin-top: -2em;
-  margin-right: -6px;
-}
-
-nav li:first-of-type {
-  padding-left: 1em;
 }
 
 nav li:after {
   content: '';
 
-  margin: -1em 1em -1em 1.27em;
+  margin: -1em 1em -1em 1em;
 
   border-right: 1px solid #fff;
-  -moz-transform: skew(-35deg);
-  -webkit-transform: skew(-35deg);
-  transform: skew(-35deg);
+  -moz-transform: skew(-22.5deg);
+  -webkit-transform: skew(-22.5deg);
+  transform: skew(-22.5deg);
 }
 
 nav a {
@@ -242,8 +239,6 @@ footer {
 
     align-items: start;
     justify-content: start;
-
-    padding: 3px;
   }
   #booking {
     align-items: stretch;
