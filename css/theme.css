@@ -55,7 +55,7 @@ header {
   min-height: 61.8vh;
   padding: 0 10px;
 
-  background: #000;
+  background: #ccc;
   border-bottom: 1px solid #ddd;
 }
 
@@ -133,11 +133,12 @@ header img {
   margin-left: 0.42em;
 }
 
-nav {
-  display: flex;
-  flex: 1;
+.nowrap {
+	white-space: nowrap;
+}
 
-  border: 1px solid #fff;
+nav {
+  /*border: 1px solid #fff;*/
   padding: 1em 1em 1em 2em;
 
   align-self: center;
@@ -145,17 +146,26 @@ nav {
 
 nav li {
   display: inline-flex;
+
+  border-top: 1px solid #fff;
+  padding: 1em 0 1em 0;
+  margin-top: -2em;
+  margin-right: -6px;
+}
+
+nav li:first-of-type {
+  padding-left: 1em;
 }
 
 nav li:after {
   content: '';
 
-  margin: -1em 1em -1em 1em;
+  margin: -1em 1em -1em 1.27em;
 
   border-right: 1px solid #fff;
-  -moz-transform: skew(-22.5deg);
-  -webkit-transform: skew(-22.5deg);
-  transform: skew(-22.5deg);
+  -moz-transform: skew(-35deg);
+  -webkit-transform: skew(-35deg);
+  transform: skew(-35deg);
 }
 
 nav a {
@@ -224,12 +234,6 @@ footer {
 
     margin-top: 1em;
   }
-  nav {
-    padding-right: 8em;
-  }
-  nav li:first-of-type {
-    margin-bottom: 2em;
-  }
   nav li:after {
     margin: -1em 1em -1em 2em;
   }
@@ -251,9 +255,21 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav {
     padding-right: 1em;
+  }
+}
+
+@media (max-width: 672px) {
+  nav li:first-of-type {
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  nav li:nth-of-type(3) {
+    margin-bottom: 2em;
   }
 }
 
