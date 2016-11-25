@@ -118,6 +118,10 @@ main section {
   padding: 1em;
 }
 
+#booking {
+  align-self: flex-start;
+}
+
 @media (max-width: 768px) {
   header small {
     flex: 1;
@@ -133,5 +137,11 @@ main section {
   }
   .container {
     flex-direction: column;
+  }
+  #booking {
+    justify-content: center !important;
+
+    position: absolute;
+    top: 6em;
   }
 }
