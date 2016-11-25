@@ -6,19 +6,7 @@ body {
   background: #eee;
 
   /* Adam Morse, github.com/mrmrs */
-  font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
-               'avenir next', avenir, /* MacOS and iOS */
-               'Segoe UI', /* Windows */
-               'lucida grande', /* Older MacOS */
-               'helvetica neue', helvetica, /* Older MacOS */
-               'Fira Sans', /* Firefox OS */
-               roboto, noto, /* Google stuff */
-               'Droid Sans', /* Old Google stuff */
-               cantarell, oxygen, ubuntu, /* Linux stuff */
-               'franklin gothic medium', 'century gothic', /* Windows stuff */
-               'Liberation Sans', /* Linux */
-               sans-serif; /* Everything else */
-  /* /mrmrs */
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'Segoe UI', 'lucida grande', 'helvetica neue', helvetica, 'Fira Sans', roboto, noto, 'Droid Sans', cantarell, oxygen, ubuntu, 'franklin gothic medium', 'century gothic', 'Liberation Sans', sans-serif;
 }
 
 /* more mrmrs */
@@ -28,7 +16,7 @@ a {
 }
 a:link,
 a:visited { color: #265C83; }
-a:hover   { color: #000; }
+a:hover   { color: #7FDBFF; }
 a:active  {
   transition: color .3s;
   color: #007BE6;
@@ -40,58 +28,24 @@ p {
   margin-bottom: 1em;
 }
 
+b {
+  font-style: bold;
+}
+
 i {
   font-style: italic;
 }
 
 header {
   display: flex;
-
   align-items: center;
 
-  min-height: 40px;
-  padding: 0 10px;
+  padding: 10px;
 
-  background: #e9e9e9;
   border-bottom: 1px solid #ddd;
-}
 
-header b:first-of-type {
+  background: #000;
   color: #fff;
-  text-shadow: 1px 1px #000,
-               0 1px 3px #aaa;
-
-  font-weight: 400;
-
-  padding-right: 0.27em;
-
-  position: relative;
-  bottom: 1px;
-}
-
-header b:nth-of-type(2) {
-  font-weight: 700;
-}
-
-header b:last-of-type {
-  color: #fff;
-  text-shadow: 1px 1px #cacaca,
-               0 1px 3px #ccc;
-
-  font-weight: 400;
-
-  position: relative;
-  bottom: 1px;
-
-  flex: 1;
-}
-
-header a {
-  float: right;
-}
-
-header img {
-  max-height: 1em;
 }
 
 content {
@@ -105,43 +59,11 @@ content {
 }
 
 main {
+  display: flex;
   flex: 1;
-}
 
-#booking {
-  margin-top: auto;
-}
-
-main > ul {
-  display: inline-block;
-
-  margin: 0 1em 1em 0;
-}
-
-nav {
-  flex: 0 0 12em;
-  order: -1;
-
-  align-self: center;
-}
-
-nav li {
-  margin-top: 0.5em;
-}
-
-li > ul {
-  padding-left: 0.33em;
-}
-
-nav a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-style: italic;
-}
-
-nav a:after {
-  content: ' \00bb';
-  opacity: 0.27;
+  align-items: center;
+  justify-content: center;
 }
 
 aside {
@@ -165,23 +87,6 @@ footer {
 @media (max-width: 768px) {
   content {
     flex-direction: column;
-
-    align-items: start;
-    justify-content: start;
-
-    padding: 3px;
-  }
-  #booking {
-    align-items: stretch;
-    justify-content:  flex-start;
-  }
-  nav {
-    flex: 1;
-    order: 1;
-
-    align-self: flex-start;
-
-    margin-left: 1em;
   }
   aside {
     flex: 1;
