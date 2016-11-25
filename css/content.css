@@ -15,28 +15,33 @@ header small {
 }
 
 nav {
-  flex: 1;
   display: flex;
+  flex: 1;
+
+  background: #000;
 }
 
 nav ul {
-  margin-left: 2em;
   display: flex;
   align-items: center;
+
+  background: #000;
 
   margin: -0.5em 0 -0.5em 0;
 }
 
 nav li {
   display: inline-flex;
-
   align-self: center;
+
+  padding: 0 0.5em 0 1em;
+  margin: 0 -2em 0 0;
 }
 
 nav li:before {
   content: '';
 
-  margin: -1em 1em -1em 1.5em;
+  margin: -0.75em 1em -0.75em 1.5em;
 
   border-right: 1px solid #fff;
   -moz-transform: skew(-22.5deg);
@@ -47,7 +52,7 @@ nav li:before {
 nav li:last-child:after {
   content: '';
 
-  margin: -1em 1em -1em 1.5em;
+  margin: -0.75em 1em -0.75em 1.5em;
 
   border-right: 1px solid #fff;
   -moz-transform: skew(-22.5deg);
@@ -62,8 +67,8 @@ nav a {
 
   color: #7FDBFF;
 
-  padding: 1em;
-  margin: -1em;
+  padding: 1em 0.5em 1em 1.5em;
+  margin: -1em -0.5em -1em -1.5em;
 }
 
 nav a:link,
@@ -72,19 +77,24 @@ nav a:hover   { color: #265C83; }
 
 #alternate {
   display: none;
+  flex-wrap: wrap;
+
+  padding: 0.5em 0 1.5em 0;
 
   justify-content: center;
+}
 
-  background: #000;
-  max-height: 3em;
+#alternate li {
+  margin-top: 1em;
+  padding-right: 1em;
 }
 
 #alternate li:before {
-  margin: -1em 0.5em -1em 0.75em;
+  margin: -0.5em 0.5em -0.5em 0.75em;
 }
 
 #alternate li:last-child:after {
-  margin: -1em 0.5em -1em 0.75em;
+  margin: -0.5em 0.5em -0.5em 0.75em;
 }
 
 header img {
@@ -131,6 +141,7 @@ main section {
   }
   #alternate {
     display: flex;
+    flex: 0;
   }
   main {
     flex-direction: column;
