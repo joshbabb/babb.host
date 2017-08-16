@@ -134,7 +134,6 @@ nav a {
     align-items: stretch;
   }
   .box {
-    min-height: 1em;
   }
   .box:nth-of-type(2) {
     border-left: 1px solid #fff;
